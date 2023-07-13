@@ -1,5 +1,4 @@
-![image](https://github.com/biola1/ec2-boto3/assets/90300917/62bd6083-67de-4c3a-851c-1ebdb938a177)# ec2-boto3
-HOW TO LAUNCH AN EC2 INSTANCE USING PYTHON BOTO3 
+![image](https://github.com/biola1/ec2-boto3/assets/90300917/2d9158ec-da51-432d-8656-e12cca45a45c)![image](https://github.com/biola1/ec2-boto3/assets/90300917/c814a975-d29e-480b-8f93-49bf4490d6d5)HOW TO LAUNCH AN EC2 INSTANCE USING PYTHON BOTO3 
 Hello Team, This is going to be a very interesting  topic today.
 Scenario: Our DevOps engineering team often uses a development lab to test releases of our application. The Managers are complaining about the rising cost of our development lab and need to save money by stopping our (for this example) 3 ec2 instances after all engineers are clocked out.
 I will create a Python script that you can run that will stop all instances. Push your code to GitHub and include the link in your write up.
@@ -37,19 +36,13 @@ Go to the boto3 documentation search for create_AMI and we will see the request 
 • InstanceType: This specifies the type of the EC2 instance you want to create. t2.micro is the free instance type.
 • Keypair: This will be the key pair we created from our console. 
 • Tag: the Key and value of the instances awe created. Key will be the name and the value I used the environment. So I used dev environment and test environment and production environment 
-• Save and run the script and we will see our instaces created.
-
-
-
-
-
- 
+Save and run the script and we will see our instaces created.
 import boto3
 
 ec2 = boto3.client('ec2')
 
 response = ec2.run_instances(ImageId='ami-0f1d81f096d85d94b',
-                                   KeyName='****',
+                                   KeyName='dade',
                                    MaxCount=3,
                                    MinCount=3,
                                    InstanceType='t2.micro',
@@ -153,3 +146,5 @@ To test I will use one-off schedule and set to 5 mins
 Now our instances are stop 
 Thank you for your time and I will push my code to github 
 Please don’t forget to delete when you are done if you are practicing 
+Follow me on www.linkedin.com/in/abiola-majekodunmi- for more projects and also watch out for my next project 
+Thank you 
